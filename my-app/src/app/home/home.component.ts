@@ -17,4 +17,13 @@ export class HomeComponent implements OnInit {
     this.clickCounter += 1
   }
 
+  setClass(){
+    let classes ={
+      active: this.clickCounter > 4,
+      notactive: this.clickCounter < 4,
+
+    }
+    return classes
+  }
+
 }

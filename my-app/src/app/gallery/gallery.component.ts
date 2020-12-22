@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpService} from 'src/app/http.service';
 
 @Component({
   selector: 'app-gallery',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
-  constructor() { }
+  datas: object | undefined;
+
+  constructor(private _http: HttpService) { }
 
   ngOnInit(): void {
-  }
+    this._http.myMethod().subscribe(data =>{
+      this.datas= data
+      console.log(this.datas)
+    });
+    
+    }
 
 }
