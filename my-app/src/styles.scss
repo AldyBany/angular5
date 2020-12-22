@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+$primary: #0082e6;
+
+body{
+    margin: 0;
+    // font-size: 18px;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+header{
+    background: $primary;
+    padding: 1em 0;
+
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .logo{
+        font-weight: bold;
+    }
+
+    nav{
+        float: right;
+    }
+
+    ul{
+        list-style: none;
+        margin: 0;
+        display: flex;
+
+        li a{
+            padding: 1em;
+            transition: .3s;
+            &:hover{
+                background-color: darken($primary, 15%);
+            }
+        }
+    }
+}
