@@ -1,1 +1,9 @@
-<p>gallery works!</p>
+<h1>Breweries</h1>
+<ul *ngIf="datas">
+    <li *ngFor="let data of datas">
+        <p class="name">{{data.name}}</p>
+        <p class="country">{{data.country}}</p>
+        <a href="{{data.website_url}}" class="site">site</a>
+    </li>
+
+</ul>

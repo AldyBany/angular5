@@ -8,7 +8,7 @@ import {HttpService} from 'src/app/http.service';
 })
 export class GalleryComponent implements OnInit {
 
-  datas: object | undefined;
+  datas: any;
 
   constructor(private _http: HttpService) { }
 
